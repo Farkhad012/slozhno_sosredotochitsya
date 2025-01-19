@@ -24,7 +24,7 @@ html[data-theme-style="day"] {
   --color-btn-text: #353430;
   --color-border: #353430;
   --color-border-hover: rgba(50, 49, 45, 0.4);
-  --color-link-shadow: 2px 2px 0 #FF0070;
+  --color-link-shadow: 2px 2px 0 rgba(255, 0, 112, 0.4);
   
   /* bg-image */
   --image-bg: url(../images/header-bg-day.jpg) center/ cover no-repeat;

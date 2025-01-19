@@ -31,7 +31,7 @@
 .h1,
 .h2,
 .h3 {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .h1 {
@@ -50,6 +50,10 @@
   color: var(--color-subtitle-h3);
 }
 
+.h4 {
+  color: var(--color-text-secondary);
+}
+
 .button {
   color: var(--color-btn-text);
   padding: 0 13px;
@@ -60,11 +64,50 @@
   border: 1px solid var(--color-border);
 }
 
+.card {
+  flex: 1;
+}
+
+.card__heading {
+  background-color: var(--color-text-bg);
+}
+
+.card__content {
+  color: var(--color-text-primary);
+  margin-top: 10px;
+}
+
+.card__link {
+  position: relative;
+  color: var(--color-text-primary);
+}
+
+.card__link::before {
+  content: attr(data-content);
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  text-shadow: var(--color-link-shadow);
+}
+
+.card__link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.card__link:focus {
+  border: 1px solid inherit;
+}
+
 /* header --------------------------------------------------*/
+
+.header {
+  background: var(--image-bg);
+}
 
 .header__inner {
   padding-block: clamp(0.625rem, 0.2639rem + 1.5408vw, 1.25rem);
-  background: var(--image-bg);
 }
 
 .header__theme-switcher {
@@ -121,7 +164,7 @@
   max-width: clamp(22.75rem, -1.0625rem + 49.6094vw, 30.6875rem);
   color: var(--color-text-secondary);
   background-color: var(--color-text-bg);
-  font-weight: bold;
+  font-weight: 700;
 }
 
 @media screen and (max-width: 768px) {
@@ -153,45 +196,50 @@
 }
 
 .reasons__heading {
-  flex: 1;
+  flex: 0 0 30%;
 }
 
-.reasons__content {
-  flex: 2;
-}
-
-.reasons__content-item + .reasons__content-item {
+.reasons__content-item+.reasons__content-item {
   margin-top: 20px;
 }
 
-.card__heading {
-  background-color: var(--color-text-bg);
+
+/* troubles --------------------------------------------------*/
+
+.troubles {
+  margin-top: 80px;
 }
 
-.card__content {
-  color: var(--color-text-primary);
-  margin-top: 10px;
+@media screen and (max-width: 375px) {
+  .troubles {
+    margin-top: 50px;
+  }
 }
 
-.card__link {
-  position: relative;
+.troubles__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.card__link::before {
-  content: attr(data-content);
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  text-shadow: var(--color-link-shadow);
+.troubles__heading {
+  max-width: 30%;
 }
 
-.card__link:hover {
-  text-decoration: underline;
-  text-underline-offset: 4px;
+@media screen and (max-width: 375px) {
+  .troubles__heading {
+    max-width: 100%;
+  }
 }
 
-.card__link:focus {
-  border: 1px solid inherit;
+.troubles__content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
 }
 
+@media screen and (max-width: 768px) {
+  .troubles__content {
+    flex-direction: column;
+  }
+}
