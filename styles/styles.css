@@ -6,6 +6,7 @@
 * {
   font-family: var(--font-primary);
   font-size: var(--text-size);
+  line-height: 24px;
 }
 
 .body {
@@ -27,9 +28,30 @@
   }
 }
 
+.h1,
+.h2,
+.h3 {
+  font-weight: bold;
+}
+
+.h1 {
+  font-size: var(--title-size-lg-md);
+  line-height: 130px;
+  text-transform: lowercase;
+  color: var(--color-title-text);
+  text-shadow: 4px 4px 0px var(--color-title-shadow);
+}
+
+.h2 {
+  color: var(--color-subtitle-h2);
+}
+
+.h3 {
+  color: var(--color-subtitle-h3);
+}
+
 .button {
   color: var(--color-btn-text);
-  line-height: 24px;
   padding: 0 13px;
   text-transform: lowercase;
 }
@@ -64,11 +86,6 @@
 .header__title {
   position: relative;
   left: -20px;
-  font-size: var(--title-size-lg-md);
-  font-weight: bold;
-  text-transform: lowercase;
-  color: var(--color-title-text);
-  text-shadow: 4px 4px 0px var(--color-title-shadow);
   margin-top: clamp(10.8125rem, -7.9375rem + 39.0625vw, 17.0625rem);
 }
 
@@ -91,14 +108,12 @@
 .header__text {
   display: flex;
   justify-content: right;
-  margin-top: clamp(10.125rem, 19.125rem + -18.75vw, 7.125rem);
-  margin-bottom: clamp(10.8125rem, 19.8125rem + -18.75vw, 7.8125rem);
+  margin-block: 114px;
 }
 
 @media screen and (max-width: 768px) {
   .header__text {
-    margin-top: clamp(3.4375rem, -2.9437rem + 27.2265vw, 10.125rem);
-    margin-bottom: clamp(3.5rem, -3.4776rem + 29.771vw, 10.8125rem);
+    margin-block: clamp(3.4375rem, -3.0033rem + 27.4809vw, 10.1875rem);
   }
 }
 
@@ -114,3 +129,69 @@
     max-width: clamp(22.1875rem, 21.6508rem + 2.2901vw, 22.75rem);
   }
 }
+
+/* reasons --------------------------------------------------*/
+.reasons {
+  margin-top: 60px;
+}
+
+@media screen and (max-width: 375px) {
+  .reasons {
+    margin-top: 40px;
+  }
+}
+
+.reasons__inner {
+  display: flex;
+  gap: 20px;
+}
+
+@media screen and (max-width: 375px) {
+  .reasons__inner {
+    flex-direction: column;
+  }
+}
+
+.reasons__heading {
+  flex: 1;
+}
+
+.reasons__content {
+  flex: 2;
+}
+
+.reasons__content-item + .reasons__content-item {
+  margin-top: 20px;
+}
+
+.card__heading {
+  background-color: var(--color-text-bg);
+}
+
+.card__content {
+  color: var(--color-text-primary);
+  margin-top: 10px;
+}
+
+.card__link {
+  position: relative;
+}
+
+.card__link::before {
+  content: attr(data-content);
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  text-shadow: var(--color-link-shadow);
+}
+
+.card__link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.card__link:focus {
+  border: 1px solid inherit;
+}
+
