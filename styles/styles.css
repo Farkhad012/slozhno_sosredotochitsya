@@ -28,6 +28,14 @@
   }
 }
 
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
 .h1,
 .h2,
 .h3 {
@@ -46,12 +54,19 @@
   color: var(--color-subtitle-h2);
 }
 
+.h3,
+.h4 {
+  background-color: var(--color-text-bg);
+}
+
 .h3 {
   color: var(--color-subtitle-h3);
+  font-weight: bold;
 }
 
 .h4 {
   color: var(--color-text-secondary);
+  font-weight: normal;
 }
 
 .button {
@@ -64,15 +79,46 @@
   border: 1px solid var(--color-border);
 }
 
+.section {
+  display: flex;
+}
+
+
+.section__inner,
+.section__content {
+  gap: 20px;
+}
+
+@media screen and (max-width: 375px) {
+  .section__inner,
+  .section__content {
+    flex-direction: column;
+  }
+}
+
+.section__content {
+  flex-wrap: wrap;
+}
+
+.section__title {
+  max-width: 30%;
+  min-width: 30%;
+}
+
+@media screen and (max-width: 375px) {
+  .section__title {
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
+
 .card {
   flex: 1;
 }
 
-.card__heading {
-  background-color: var(--color-text-bg);
-}
 
 .card__content {
+  min-width: 250px;
   color: var(--color-text-primary);
   margin-top: 10px;
 }
@@ -184,26 +230,6 @@
   }
 }
 
-.reasons__inner {
-  display: flex;
-  gap: 20px;
-}
-
-@media screen and (max-width: 375px) {
-  .reasons__inner {
-    flex-direction: column;
-  }
-}
-
-.reasons__heading {
-  flex: 0 0 30%;
-}
-
-.reasons__content-item+.reasons__content-item {
-  margin-top: 20px;
-}
-
-
 /* troubles --------------------------------------------------*/
 
 .troubles {
@@ -216,30 +242,15 @@
   }
 }
 
-.troubles__inner {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
 
-.troubles__heading {
-  max-width: 30%;
+/* advices --------------------------------------------------*/
+
+.advices {
+  margin-top: 80px;
 }
 
 @media screen and (max-width: 375px) {
-  .troubles__heading {
-    max-width: 100%;
-  }
-}
-
-.troubles__content {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-@media screen and (max-width: 768px) {
-  .troubles__content {
-    flex-direction: column;
+  .advices {
+    margin-top: 50px;
   }
 }
