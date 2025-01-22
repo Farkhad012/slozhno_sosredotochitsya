@@ -10,7 +10,8 @@
 
 <body class="body">
   <header class="header">
-    <div class="header__inner container">
+    <div class="header__inner container rec">
+      <div class="rec-text">Rec</div>
       <div class="header__theme-switcher">
         <button class="header__theme-button button active">День</button>
         <button class="header__theme-button button">Авто</button>
@@ -28,7 +29,7 @@
 
   <main class="main">
     <section class="section reasons">
-      <div class="section__inner container flex">
+      <div class="section__inner container flex reasons__inner">
         <h2 class="section__title h2">Почему сосредоточиться так сложно</h2>
         <div class="section__content flex flex-column">
           <div class="section__content-item card">
@@ -96,8 +97,8 @@
       </div>
     </section>
 
-    <div class="section advices">
-      <div class="section__inner container flex">
+    <section class="section advices">
+      <div class="section__inner container flex advices__inner">
         <h2 class="section__title h2">
           Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх секунд)
         </h2>
@@ -126,9 +127,9 @@
           <div class="section__content-item card">
             <h4 class="card__title h4">Прогуляйтесь</h4>
             <p class="card__content">
-              Или даже пробегитесь. Лучше найти парк или лес: один эксперимент 
-              <a class="card__link" href="https://www.sciencedirect.com/science/article/abs/pii/S0272494415000328" target="_blank"
-                data-content="показал">
+              Или даже пробегитесь. Лучше найти парк или лес: один эксперимент
+              <a class="card__link" href="https://www.sciencedirect.com/science/article/abs/pii/S0272494415000328"
+                target="_blank" data-content="показал">
                 показал
               </a>, что созерцание природы повышает
               концентрацию, в то время как после просмотра городских пейзажей она наоборот понижается. Можно совместить
@@ -154,8 +155,37 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <section class="gallery">
+      <div class="gallery__inner container">
+        <h3 class="gallery__title h3">А можно в картинках?</h3>
+        <div class="gallery__content">
+          <div class="gallery__content-item item-1 overlay">
+            <img class="gallery__content-image" src="./images/g-1.jpg" alt="">
+          </div>
+          <div class="gallery__content-item item-2 overlay">
+            <img class="gallery__content-image" src="./images/g-2.png" alt="">
+          </div>
+          <div class="gallery__content-item item-3 overlay">
+            <img class="gallery__content-image" src="./images/g-3.jpg" alt="">
+          </div>
+          <div class="gallery__content-item item-4 overlay">
+            <img class="gallery__content-image" src="./images/g-4.jpg" alt="">
+          </div>
+          <div class="gallery__content-item item-5 overlay">
+            <img class="gallery__content-image" src="./images/g-5.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="footer">
+    <div class="footer__inner flex container rec">
+      <p class="footer__text h1">focus</p>
+    </div>
+  </footer>
 </body>
 
 </html>
