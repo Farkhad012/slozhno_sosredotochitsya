@@ -1,0 +1,50 @@
+:root {
+  /* fonts */
+  --font-primary: 'IBM Plex Mono', sans-serif;
+  
+  /* sizes */
+  --title-size-lg-md: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  --title-size-md-sm: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --text-size: 18px;
+
+  --padding-x-lg-md: 20px;
+  --padding-x-md-sm: clamp(0.625rem, 0.2639rem + 1.5408vw, 1.25rem);
+}
+
+html[data-theme-style="day"] {
+  /* colors */
+  --color-bg: #FFF1F7;
+  --color-title-text: #FFC2E6;
+  --color-title-shadow: #FF0070;
+  --color-subtitle-h2: #353430;
+  --color-subtitle-h3: #353430;
+  --color-text-bg: #FF8DCB;
+  --color-text-primary: #353430;
+  --color-text-secondary: #353430;
+  --color-btn-text: #353430;
+  --color-border: #353430;
+  --color-border-hover: rgba(50, 49, 45, 0.4);
+  --color-link-shadow: 2px 2px 0 rgba(255, 0, 112, 0.4);
+  
+  /* bg-image */
+  --image-bg: url(../images/header-bg-day.jpg) center/ cover no-repeat;
+}
+
+html[data-theme-style="neon"] {
+  /* colors */
+  --color-bg: #000028;
+  --color-title-text: #DB00FF;
+  --color-title-shadow: #FF0070;
+  --color-subtitle-h2: #FF0070;
+  --color-subtitle-h3: #000028;
+  --color-text-bg: #FF0070;
+  --color-text-primary: #F1B2CE;
+  --color-text-secondary: #000028;
+  --color-btn-text: #FF0070;
+  --color-border: #FF0070;
+  --color-border-hover: rgba(255, 0, 112, 0.4);
+  --color-link-shadow: 2px 2px 0 #FF0070;
+  
+  /* bg-image */
+  --image-bg: url(../images/header-bg-neon.jpg) center/ cover no-repeat;
+}

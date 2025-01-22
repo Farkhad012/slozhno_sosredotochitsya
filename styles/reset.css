@@ -36,23 +36,7 @@ body {
 
 a,
 a:visited {
-  text-decoration: underline;
-}
-
-a:hover {
   text-decoration: none;
-}
-
-@media (hover: hover) {
-  a:hover {
-    text-decoration: none;
-  }
-}
-
-@media (hover: none) {
-  a:hover {
-    text-decoration: none;
-  }
 }
 
 ul li {
@@ -69,12 +53,13 @@ h3 {
 
 a {
   color: inherit;
-  text-decoration: underline;
-  text-underline-offset: 5px;
-  text-decoration-thickness: 1px;
 }
 
 span {
   font-family: inherit;
   font-size: inherit;
+}
+
+button {
+  background-color: inherit;
 }
